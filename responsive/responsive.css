@@ -1,0 +1,150 @@
+/*Add a web font to your pages with the CSS @font-face rule.*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* prevent font scaling in landscape orientation on iOS devices */
+}
+
+
+body{
+	background-color: midnightblue;
+}
+
+/*Making images scale to fit the size of their container*/
+img {width: 100%;}
+
+#container {width: 100%;}
+
+.wrapper{width: 100%;}
+
+.picture {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	column-gap: 15px;
+}
+
+.nav-list a { 
+	font-family: Monaco;
+	font-size:  1.3em;
+	border-bottom: 2px solid floralwhite;
+}
+
+.whole{
+	font-family: Quicksand;
+	font-size:  1.1em;
+	color: floralwhite;
+	line-height: 2.0em;
+}
+
+a:link{ /* unvisited link */
+	color:#008000;
+}
+
+a:visited{ /* visited link */
+	color:#008000;
+}
+
+a:hover{ /* mouse over link */
+	color:gold;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    color: yellow;
+}
+
+#new{
+	text-align: center;
+	color: yellow;
+	font-family: Chalkduster;
+	font-size:  1.3em;
+	padding: 10px;
+}
+
+ul.nav-list {
+	list-style: none;
+	width: 80%;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+.moon2 {
+  display: flex;
+  flex-direction:row;
+  column-gap: 20px;
+}
+
+.moon4 {
+	width: 100%;
+	height: auto;
+}
+
+.moon3{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+
+.wrapper2 {
+	width: 100%;
+}
+
+.wrapper4{
+	width: 100%;
+}
+
+
+/*--- media query ---*/
+@media (min-width:960px){
+	#container {
+    width: 950px;
+    margin: auto;
+  }
+
+  .wrapper {
+  	display: grid;
+	  grid-template-columns: repeat(4, 1fr); /* three columns, each 1/3 width */
+	  column-gap: 15px;
+  }
+
+  .picture {
+	  margin-top: 5px;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: start;
+	  row-gap: 50px;
+  }
+
+  .moon3{
+  	margin-left: 120px;
+  	margin-right: 120px;
+	  display: flex;
+	  flex-direction:row;
+  }
+
+  .wrapper2 {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr); /* three columns, each 1/3 width */
+	  column-gap: 30px;
+  }
+
+  .wrapper4 {
+	  grid-row: 3 / 4;
+	  grid-column: 2 / 3;
+  } 
+
+  ul.nav-list {
+  	flex-direction: row;
+  	justify-content: space-around;
+  }
+}
